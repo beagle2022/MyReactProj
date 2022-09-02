@@ -4,7 +4,8 @@ import React, { Component } from 'react';
 class Counter extends Component {
     state={
         count: 0,
-        tags:['tag1','tag2','tag3']
+        imageURL: "https://picsum.photos/200",
+        tags:['Veggies','Meat','Stationary']
     };
 
     styles={
@@ -16,16 +17,28 @@ class Counter extends Component {
         this.setState({count:this.state.count+1});
     };
 
+    handleDecrement=()=>{
+        this.setState({count:this.state.count-1});
+    };
+
     render() { 
 
         return (
                 <div>
+                    <img src={this.state.imageURL}/>
                     <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
                     <button 
                         onClick={this.handleIncrement} 
                         className="btn btn-secondary btn-sm"
                     >
-                        Increment
+                        +Increment
+                    </button>
+                     | 
+                    <button 
+                        onClick={this.handleDecrement} 
+                        className="btn btn-secondary btn-sm"
+                    >
+                        -Decrement
                     </button>
                     <ul>
                         {this.state.tags.map(tag =><li key={tag}>{tag}</li>)}
