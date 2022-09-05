@@ -1,9 +1,0 @@
-const Rule =({color})=>(
-    <hr
-        style={{
-
-            borderColor : color,
-        }}
-
-    />
-);
