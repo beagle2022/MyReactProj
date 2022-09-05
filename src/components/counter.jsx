@@ -25,11 +25,13 @@ class Counter extends Component {
 
         return (
                 <div>
-                    
-                    <img src={this.state.imageURL}/>
-                    <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-                    Heres an Orange Rule.<hr color="orange" />
 
+                    <img src={this.state.imageURL}/>
+                    <p>
+                        <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
+                    
+                            Heres an Orange Rule.<hr color="orange" />
+                    </p>
                     <button 
                         onClick={this.handleIncrement} 
                         className="btn btn-secondary btn-sm"
@@ -43,9 +45,9 @@ class Counter extends Component {
                     >
                         -
                     </button>
-
-                    Heres an Blue Rule.<hr color="blue" />
-
+                    
+                        Heres an Blue Rule.<hr color="blue" />
+                    
                     <ul>
                         {this.state.tags.map(tag =><li key={tag}>{tag}</li>)}
                     </ul>
