@@ -14,7 +14,7 @@ class Counter extends Component {
     };
 
     handleIncrement=()=>{
-        this.setState({count:this.state.count+1});
+        this.setState({count:this.state.count+1}); 
     };
 
     handleDecrement=()=>{
@@ -31,14 +31,14 @@ class Counter extends Component {
                         onClick={this.handleIncrement} 
                         className="btn btn-secondary btn-sm"
                     >
-                        +Increment
+                        +
                     </button>
                      | 
                     <button 
                         onClick={this.handleDecrement} 
                         className="btn btn-secondary btn-sm"
                     >
-                        -Decrement
+                        -
                     </button>
                     <ul>
                         {this.state.tags.map(tag =><li key={tag}>{tag}</li>)}
