@@ -30,8 +30,8 @@ class Counter extends Component {
                     <p>
                         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
                     
-                            Heres an Blue Rule.<hr color="blue" />
                     </p>
+		    Heres an Blue Rule.<hr color="blue" />
                     <button 
                         onClick={this.handleIncrement} 
                         className="btn btn-secondary btn-sm"
