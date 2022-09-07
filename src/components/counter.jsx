@@ -32,7 +32,7 @@ class Counter extends Component {
     render() { 
 
         return (
-                <div >
+                <div>
                     <hr color="red" />
                     
                     <img src={this.state.imageURL}/>
