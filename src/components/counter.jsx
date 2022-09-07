@@ -24,7 +24,7 @@ class Counter extends Component {
     render() { 
 
         return (
-                <div>
+                <div className="d-inline-flex p-2">
                     Heres an Orange Rule.<hr color="orange" />
                     <img src={this.state.imageURL}/>
                     <p>
