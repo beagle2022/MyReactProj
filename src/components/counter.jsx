@@ -4,7 +4,7 @@ class Counter extends Component {
     state={
         count: 0,
         imageURL: "https://picsum.photos/200",
-        tags:[]
+        tags:["Veggies","Fish", "Cereals", "Shoes", "Garment", "Furniture"]
     };
 
     
@@ -33,6 +33,7 @@ class Counter extends Component {
     render() { 
 
         return (
+            
                 <div
                     style={{
                         display: 'flex',
@@ -41,17 +42,21 @@ class Counter extends Component {
                         height: '100vh',
                     }}
                 >
-                    <div>
-                        <hr color="red" />
-                    </div>
+                <div>
+                    <p><b>
+                        {this.renderTags()}
+                        { this.state.tags.length===0 && "Please create a new tag!"} 
+                    </b></p>  
+                </div>
 
                     <div>
-                        <img src={this.state.imageURL} border="5"/>
-                        <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
+                        <span class="border border-info">
+                            <img src={this.state.imageURL} class="border border-dark"/>
+                        </span>
+                            <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
+                        
                     </div>
-                    <div>
-                        <hr color="blue" />
-                    </div>
+
                     <div>
                         <button 
                             onClick={this.handleIncrement} 
@@ -69,15 +74,6 @@ class Counter extends Component {
                             
                         </button>
                     </div>
-                    <div>
-                        <hr color="blue" />
-                    </div>
-                    
-                    <p>
-                            {this.renderTags()}
-                            { this.state.tags.length===0 && "Please create a new tag!"}
-                        
-                    </p>
                 </div>
         );
     }
