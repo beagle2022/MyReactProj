@@ -34,44 +34,50 @@ class Counter extends Component {
 
         return (
                 <div
-                
-                style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                  }}
-                
+                    style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        height: '100vh',
+                    }}
                 >
-                    <hr color="red" />
-                    
-                    <img src={this.state.imageURL}/>
-                    <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-                    
-                    <hr color="blue" />
-                    
-                    <button 
-                        onClick={this.handleIncrement} 
-                        className="btn btn-secondary btn-sm"
-                    >
-                        +
+                    <div>
+                        <hr color="red" />
+                    </div>
 
-                    </button>
-                     | 
-                    <button id ="b1"
-                        onClick={this.handleDecrement} 
-                        className="btn btn-secondary btn-sm"
-                    >
-                        -
+                    <div>
+                        <img src={this.state.imageURL} border="5"/>
+                        <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
+                    </div>
+                    <div>
+                        <hr color="blue" />
+                    </div>
+                    <div>
+                        <button 
+                            onClick={this.handleIncrement} 
+                            className="btn btn-secondary btn-sm"
+                        >
+                            +
+
+                        </button>
+                        | 
+                        <button id ="b1"
+                            onClick={this.handleDecrement} 
+                            className="btn btn-secondary btn-sm"
+                        >
+                            -
+                            
+                        </button>
+                    </div>
+                    <div>
+                        <hr color="blue" />
+                    </div>
+                    
+                    <p>
+                            {this.renderTags()}
+                            { this.state.tags.length===0 && "Please create a new tag!"}
                         
-                    </button>
-
-                    <hr color="blue" />
-                    
-                    <br/>
-                    {this.renderTags()}
-                    { this.state.tags.length===0 && "Please create a new tag!"}
-                    
-
+                    </p>
                 </div>
         );
     }
