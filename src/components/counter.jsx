@@ -20,6 +20,7 @@ class Counter extends Component {
     };
 
     handleDecrement=()=>{
+        if(this.state.count<=0) this.b1.disabled=true;
         this.setState({count:this.state.count-1});
     };
 
@@ -48,7 +49,7 @@ class Counter extends Component {
 
                     </button>
                      | 
-                    <button 
+                    <button id ="b1"
                         onClick={this.handleDecrement} 
                         className="btn btn-secondary btn-sm"
                     >
@@ -75,6 +76,7 @@ class Counter extends Component {
 
     formatCount(){
         const {count}=this.state;
+        
         return count===0?"Zero":count;
     }
 }
