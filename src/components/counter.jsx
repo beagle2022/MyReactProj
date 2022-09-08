@@ -32,7 +32,7 @@ class Counter extends Component {
     render() { 
 
         return (
-                <div >
+                <div>
                     <hr color="red" />
                     
                     <img src={this.state.imageURL}/>
@@ -59,7 +59,7 @@ class Counter extends Component {
                     <hr color="blue" />
                     
                     <br/>
-                    {this.renderTags()};
+                    {this.renderTags()}
                     { this.state.tags.length===0 && "Please create a new tag!"}
                     
 
