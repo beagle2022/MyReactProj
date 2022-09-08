@@ -33,7 +33,14 @@ class Counter extends Component {
     render() { 
 
         return (
-                <div>
+                <div
+                    style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        height: '100vh',
+                    }}
+                >
                     <hr color="red" />
                     
                     <img src={this.state.imageURL}/>
