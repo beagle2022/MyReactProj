@@ -5,13 +5,15 @@ import Counter from "./counter";
 class Counters extends Component {
     state = {  } 
     render() { 
-        <div>
-            <span class="border border-info">
-                <img src={this.state.imageURL} class="border border-dark"/>
-            </span>
-        
-        </div>
-        return (<div><Counter /><Counter /></div>);
+
+        return (
+            <div>
+                    <img align="left" src={"Pics\FilledSCart.PNG"} className="border border-dark"/>
+                    <img align="right" src={"Pics\FilledSCart.PNG"} className="border border-dark"/>
+                       
+                <Counter /><hr color="blue"/><Counter />
+           </div>
+        );
     }
 }
  

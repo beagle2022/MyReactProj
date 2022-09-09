@@ -39,14 +39,14 @@ class Counter extends Component {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        height: '30vh',
+                        height: '65vh',
                     }}
                 >
                 <div>
-                    <p><b>
+                    
                         {this.renderTags()}
                         { this.state.tags.length===0 && "Please create a new tag!"} 
-                    </b></p>  
+                    
                 </div>
 
                     <div>
