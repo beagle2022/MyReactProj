@@ -51,7 +51,7 @@ class Counter extends Component {
 
                     <div>
                         <span class="border border-info">
-                            <img src={this.state.imageURL} class="border border-dark"/>
+                            <img src={this.state.imageURL} className="border border-dark"/>
                         </span>
                             <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
                         
