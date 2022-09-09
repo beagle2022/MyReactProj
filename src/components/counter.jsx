@@ -33,13 +33,13 @@ class Counter extends Component {
     render() { 
 
         return (
-            
+                
                 <div
                     style={{
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        height: '100vh',
+                        height: '30vh',
                     }}
                 >
                 <div>
@@ -75,6 +75,7 @@ class Counter extends Component {
                         </button>
                     </div>
                 </div>
+                
         );
     }
 
