@@ -33,48 +33,75 @@ class Counter extends Component {
     render() { 
 
         return (
-                
-                <div
-                    style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        height: '65vh',
-                    }}
-                >
+            
+            <div
+                style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    height: '80vh',
+                }}
+            >
                 <div>
-                    
+                    <p><b>
                         {this.renderTags()}
-                        { this.state.tags.length===0 && "Please create a new tag!"} 
-                    
+                        {this.state.tags.length === 0 && "Please create a new tag!"}
+                    </b></p>
                 </div>
 
-                    <div>
-                        <span class="border border-info">
-                            <img src={this.state.imageURL} className="border border-dark"/>
-                        </span>
-                            <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-                        
-                    </div>
+                <div>
+                    <span class="border border-info">
+                        <img src={this.state.imageURL} class="border border-dark" />
+                    </span>
+                    <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
 
-                    <div>
-                        <button 
-                            onClick={this.handleIncrement} 
-                            className="btn btn-secondary btn-sm"
-                        >
-                            +
-
-                        </button>
-                        | 
-                        <button id ="b1"
-                            onClick={this.handleDecrement} 
-                            className="btn btn-secondary btn-sm"
-                        >
-                            -
-                            
-                        </button>
-                    </div>
                 </div>
+
+                <div>
+                    <button
+                        onClick={this.handleIncrement}
+                        className="btn btn-secondary btn-sm"
+                    >
+                        +
+
+                    </button>
+                    |
+                    <button id="b1"
+                        onClick={this.handleDecrement}
+                        className="btn btn-secondary btn-sm"
+                    >
+                        -
+
+                    </button>
+                </div>
+            
+            <div>
+                    <span class="border border-info">
+                        <img src={this.state.imageURL} className="border border-dark" />
+                    </span>
+                    <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
+
+            </div>
+            <div>
+                    <button
+                        onClick={this.handleIncrement}
+                        className="btn btn-secondary btn-sm"
+                    >
+                        +
+
+                    </button>
+                    |
+                    <button id="b1"
+                        onClick={this.handleDecrement}
+                        className="btn btn-secondary btn-sm"
+                    >
+                        -
+
+                    </button>
+            </div>
+
+            </div>
+                
                 
         );
     }
