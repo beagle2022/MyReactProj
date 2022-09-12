@@ -9,12 +9,6 @@ class Counter extends Component {
 
     
 
-    styles={
-        fontSize: 15,
-        fontWeight: 'bold'
- 
-    };
-
     handleIncrement=()=>{
         this.setState({count:this.state.count+1}); 
     };
@@ -39,15 +33,11 @@ class Counter extends Component {
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    height: '80vh',
+                    height: '100vh',
+                    width: '50vh'
                 }}
             >
-                <div>
-                    <p><b>
-                        {this.renderTags()}
-                        {this.state.tags.length === 0 && "Please create a new tag!"}
-                    </b></p>
-                </div>
+
 
                 <div>
                     <span class="border border-info">
@@ -57,48 +47,32 @@ class Counter extends Component {
 
                 </div>
 
+
                 <div>
-                    <button
-                        onClick={this.handleIncrement}
-                        className="btn btn-secondary btn-sm"
-                    >
-                        +
+                        <button
+                            onClick={this.handleIncrement}
+                            className="btn btn-secondary btn-sm"
+                        >
+                            +
 
-                    </button>
-                    |
-                    <button id="b1"
-                        onClick={this.handleDecrement}
-                        className="btn btn-secondary btn-sm"
-                    >
-                        -
+                        </button>
+                        |
+                        <button id="b1"
+                            onClick={this.handleDecrement}
+                            className="btn btn-secondary btn-sm"
+                        >
+                            -
 
-                    </button>
+                        </button>
                 </div>
             
-            <div>
-                    <span class="border border-info">
-                        <img src={this.state.imageURL} className="border border-dark" />
-                    </span>
-                    <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
 
-            </div>
-            <div>
-                    <button
-                        onClick={this.handleIncrement}
-                        className="btn btn-secondary btn-sm"
-                    >
-                        +
-
-                    </button>
-                    |
-                    <button id="b1"
-                        onClick={this.handleDecrement}
-                        className="btn btn-secondary btn-sm"
-                    >
-                        -
-
-                    </button>
-            </div>
+                <div>
+                        <p><b>
+                            {this.renderTags()}
+                            {this.state.tags.length === 0 && "Please create a new tag!"}
+                        </b></p>
+                </div>
 
             </div>
                 

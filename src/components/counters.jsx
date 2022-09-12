@@ -6,41 +6,28 @@ class Counters extends Component {
         Counters: [
 
             {id:1,value:0},
-            {id:2,value:0},
-            {id:3,value:0}
+            {id:2,value:2}
         ]
 
     };
     render() { 
 
         return (
-            <div
-                style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    height: '80vh',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
-                }}
-            >
-                   <div 
+                <div 
                         style={{
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
                             height: '80vh',
-                            flexDirection: 'crow',
+                            width: '50vh',
+                            flexDirection: 'column',
                             justifyContent: 'space-between',
-                        }} >
-                    <img align="left" src={'./images/EmptySCart.png'} />
-                    
-                    <img align="right" src={'./images/FilledSCart.png'} />
+                        }} 
+                >
 
-                    </div>
                        
-                {this.state.Counters.map( counter => <Counter key={counter.id} /> )}
-           </div>
+                    {this.state.Counters.map( counter => <Counter key={counter.id} /> )}
+                </div>
         );
     }
 }
