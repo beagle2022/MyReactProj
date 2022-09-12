@@ -34,7 +34,6 @@ class Counter extends Component {
                     alignItems: 'center',
                     justifyContent: 'center',
                     height: '100vh',
-                    width: '50vh'
                 }}
             >
 
@@ -65,7 +64,7 @@ class Counter extends Component {
 
                         </button>
                 </div>
-            
+                
 
                 <div>
                         <p><b>
