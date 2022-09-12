@@ -13,23 +13,41 @@ class Counters extends Component {
     render() { 
 
         return (
-                <div 
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            height: '80vh',
-                            width: '50vh',
-                            flexDirection: 'column',
-                            justifyContent: 'space-between',
-                        }} 
-                >
 
-                       
-                    {this.state.Counters.map( counter => <Counter key={counter.id} /> )}
+            <div className="container-fluid"
+                    style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                flexDirection: 'row',
+                                justifyContent: 'space-between',
+                            }} 
+            
+            
+            >
+                <div className="row board-container">
 
-                    
+                    <div className="Board">
+                        <div
+                            style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                flexDirection: 'row',
+                                justifyContent: 'space-between',
+                            }} 
+                        >
+                            <img  src={'./images/EmptySCart.png'} />
+                            <img  src={'./images/EmptySCart.png'} />
+                            <img src={'./images/FilledSCart.png'} />
+                        </div>
+                            
+                            {this.state.Counters.map( counter => <Counter key={counter.id} /> )}
+            
+                            
+                    </div>
                 </div>
+            </div>
         );
     }
 }
